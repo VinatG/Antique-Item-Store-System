@@ -1,0 +1,105 @@
+CREATE TABLE user (
+    USER_ID int,
+    NAME varchar(45),
+    EMAIL varchar(45),
+    PASSWORD varchar(45),
+    ECASH int
+);
+CREATE TABLE carddetails (
+    USER_ID int,
+    NameOnCard varchar(45),
+    CreditCardNumber varchar(45),
+    ExpiryDate varchar(45),
+    CVV varchar(45)
+);
+CREATE TABLE pastorders (
+    USER_ID int,
+    ITEM_ID int(45),
+    QTY int(45),
+    DateOfPurchase varchar(45)
+);
+CREATE TABLE product_details (
+    ITEM_ID int,
+    NAME varchar(45),
+    ItemType varchar(45),
+    QTY INT,
+    Price INT
+);
+CREATE TABLE promocodes (
+    ITEM_ID INT,
+    PROMO_CODE VARCHAR(45),
+    Discount INT,
+    CASHBACK INT,
+);
+
+
+
+
+
+
+
+
+
+INSERT INTO user VALUES (1,"Dam","danbryanto1@gmail.com","PASSWORD",2323),
+(1,"Sam"," samuelpope 1991@gmail.com","PASSWORD",1000),
+(1,"John","carterjohnimo@gmail.com","PASSWORD",446),
+(1,"Yoshi","yoshimitsuleemon@gmail.com","PASSWORD",2000),
+(1,"Miranda","mirandajaymes 19@gmail.com","PASSWORD",1435);
+
+
+
+
+insert into carddetails values
+(1,'Dan Bryant','122498811335','08/25',102),
+(2,'Samuel Pope','139178229020','08/21',223),
+(3,'John Carter','224177861398','01/23',678),
+(4,'Yoshimitsu Lee','123355611004','12/24',512),
+(5,'Miranda Jaymes','675523218899','09/22',456);
+		
+insert into product_details values
+(1,'Antique Wall Clock','Décor',100,6500.00),
+(2,'Music Box','Décor',250,20000.00),
+(3,'Wooden Stool','Furniture',220,57000.00),
+(4,'Brass Telescope','Décor',100,41200.00),
+(5,'Antique Vase','Décor',50,82400.00),
+(6,'Brass Idol','Décor',75,61000.00),
+(7,'Brass Gramophone','Décor',500,77000.00);
+
+INSERT into promocodes values
+(1,'AN500',500.00,5.00),
+(2,'DE800',800.00,8.00),
+(3,'FU400',400.00,4.00),
+(4,'DE800',800.00,8.00),
+(5,'DE800',800.00,8.00),
+(6,'DE800',800.00,8.00),
+(7,'DE800',800.00,8.00);
+
+insert into cart values
+(1,2,1),
+(3,7,1),
+(4,4,2),
+(5,1,3);
+
+INSERT into pastorders values
+(1,2,2,'2021-01-18'),
+(2,5,1,'2020-11-13'),
+(2,7,1,'2020-12-08'),
+(3,2,1,'2021-02-19'),
+(4,4,1,'2020-09-22'),
+(4,1,4,'2021-02-21'),
+(4,2,2,'2021-01-01');
+
+
+	
+		
+		
+	
+		
+
+		
+		
+		
+		
+
+
+
